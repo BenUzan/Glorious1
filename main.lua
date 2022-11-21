@@ -21,6 +21,17 @@ local background7 = love.graphics.newImage('media/img/background/Layer_0002_7.pn
 local ground = love.graphics.newImage('media/img/ground/Layer_0001_8.png')
 local ground1 = love.graphics.newImage('media/img/ground/Layer_0000_9.png')
 
+
+-- table des pistes audios
+local sounds = {
+  ['music'] = love.audio.newSource('media/audio/magical-forest.ogg','static')
+}
+
+-- joue le son
+sounds['music']:setLooping(true)
+sounds['music']:play()
+
+
 function love.load()
   love.graphics.setDefaultFilter("nearest","nearest")
   push:setupScreen(GAME_WIDTH, GAME_HEIGHT,WINDOW_WIDTH, WINDOW_HEIGHT, {

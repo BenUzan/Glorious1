@@ -1,26 +1,11 @@
--- The library for the LOVE rain splash screen
-local o_ten_one = require "src/lib/o-ten-one"
+-- background image
+local background = love.graphics.newImage('media/img/hills-layer-01.png')
+-- ground image
+local ground = love.graphics.newImage('media/img/hills-layer-05.png')
 
-
-function love.load()
-  -- Everything will be loaded here
-  
-end
-
-function love.update(dt)
-  -- Everything will be updated here
-  
-end
 
 function love.draw()
-  -- Everything will be drawn here
-
-end
-
-function love.keypressed(key)
-  -- Recupere une touche entree au clavier
-  if key == "escape" then
-    splashe:skip()
-    --love.event.push("quit")
-  end
+  love.graphics.draw(background, 0, 0)
+  love.graphics.draw(ground, 0, 0)
+  
 end

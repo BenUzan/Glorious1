@@ -1,5 +1,5 @@
 function love.conf(w)
-    w.width = 400
-    w.height = 400
+    w.width = 512
+    w.height = 256
     w.title = "Glorious"
 end

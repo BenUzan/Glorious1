@@ -1,7 +1,10 @@
+-- Ajouts de la librairy push pour un resolution old-school
+push = require('src/lib/push/push')
+
 -- background image
-local background = love.graphics.newImage('media/img/hills-layer-01.png')
+local background = love.graphics.newImage('media/img/background/hills-layer-01.png')
 -- ground image
-local ground = love.graphics.newImage('media/img/hills-layer-05.png')
+local ground = love.graphics.newImage('media/img/ground/hills-layer-05.png')
 
 
 function love.draw()

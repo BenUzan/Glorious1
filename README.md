@@ -1,3 +1,3 @@
-# Glorious
-First project in lua (demo)
-Small demo made in lua with the love2d framework.
+# Glorious 1
+(Demo) Game with a background and a static ground
+Made in lua with the LOVE framework.

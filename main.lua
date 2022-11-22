@@ -27,7 +27,7 @@ local sounds = {
   ['music'] = love.audio.newSource('media/audio/magical-forest.ogg','static')
 }
 
--- joue le son
+-- joue le son en boucle
 sounds['music']:setLooping(true)
 sounds['music']:play()
 

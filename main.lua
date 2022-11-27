@@ -1,5 +1,10 @@
--- Ajouts de la librairy push pour un resolution old-school
-push = require('src/lib/push/push')
+-- Author : Ben Uzan Muyumba
+
+-- Ajouts des librairy et des fichiers(classs, ...)
+push = require('src/libs/push/push')
+Class = require('src/libs/hump/class')
+require('src/classes/Knight')
+
 
 GAME_WIDTH = 928 
 GAME_HEIGHT = 793
@@ -17,6 +22,7 @@ local background5 = love.graphics.newImage('media/img/background/Layer_0005_5.pn
 local background6 = love.graphics.newImage('media/img/background/Layer_0003_6.png')
 local background7 = love.graphics.newImage('media/img/background/Layer_0002_7.png')
 
+
 -- ground images
 local ground = love.graphics.newImage('media/img/ground/Layer_0001_8.png')
 local ground1 = love.graphics.newImage('media/img/ground/Layer_0000_9.png')
@@ -31,8 +37,11 @@ local sounds = {
 sounds['music']:setLooping(true)
 sounds['music']:play()
 
+-- game object
+local knight = Knight()
 
 function love.load()
+  -- Everything will be loaded here
   love.graphics.setDefaultFilter("nearest","nearest")
   push:setupScreen(GAME_WIDTH, GAME_HEIGHT,WINDOW_WIDTH, WINDOW_HEIGHT, {
     vsync = true,
@@ -43,6 +52,7 @@ end
 
 
 function love.draw()
+  -- Everything will be drawn here
   push:start()
   love.graphics.draw(background, 0, 0)
   love.graphics.draw(background1, 0, 0)
@@ -54,11 +64,13 @@ function love.draw()
   love.graphics.draw(background7, 0, 0)
   love.graphics.draw(ground, 0, 0)
   love.graphics.draw(ground1, 0, 0)
+  knight:dessin()
   push:finish()
 end
 
 
 function love.keypressed(key)
+  -- Recupere une touche entree au clavier
   if key == 'escape' then
     love.event.push("quit")
   end

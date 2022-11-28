@@ -1,5 +1,5 @@
 -- The library for the LOVE rain splash screen
-local o_ten_one = require "src/lib/o-ten-one"
+local o_ten_one = require "src/libs/o-ten-one"
 
 
 function love.load()

@@ -64,7 +64,7 @@ function love.draw()
   love.graphics.draw(background7, 0, 0)
   love.graphics.draw(ground, 0, 0)
   love.graphics.draw(ground1, 0, 0)
-  knight:dessin()
+  knight:dessin(knight.image_idle)
   push:finish()
 end
 
